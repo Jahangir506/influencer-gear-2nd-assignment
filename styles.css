@@ -1,0 +1,47 @@
+ /*-------------------------
+ Header & Nav-bar start
+ ------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;0,700;1,600&display=swap');
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    align-items: center;
+}
+li, a {
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    font-size: 14px;
+    color: black;
+    list-style: none;
+}
+.nav-links li{
+        display: inline-block;
+        padding: 0px 10px;
+}
+/*-------------------------
+    Header & Nav-bar end
+--------------------------- */
+
+
+
+/* -------------------------
+Main-Camera style start
+---------------------------- */
+.main-cameras{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    
+}
+.cameras{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}

@@ -117,7 +117,7 @@ Main-Camera style start
     background-image: url(logos/images.png);
     background-repeat: no-repeat;
     background-position: top;
-    background-size: 87%;
+    background-size: 85%;
 }
 .camera-right img{
         width: 75%;
@@ -129,9 +129,10 @@ Main-Camera style start
     align-items: center;
 }
 .feature-right img{
-        width: 370px;
-        height: 240px;
-        border-radius: 15px;
+      width: 320px;
+      height: 210px;
+        border-radius: 7px;
+       box-shadow: 0px 0px 35px rgba(0, 0, 0, 0.20);
 }
 .camera-right:hover img{
     cursor: pointer;
@@ -234,16 +235,86 @@ footer{
     list-style: none;
     padding: 0px 10px;
 }
-@media (max-width:950px){
-    .collections{
-        grid-template-columns: repeat(1, 1fr);
+/* navbar */
+    #nav-toggler{
+        display: none;
     }
-}
+    .nav-toggler-icon{
+        display: none;
+    }
+/* responsive */
+@media (max-width:950px){
+     .collections{
+        grid-template-columns: 1fr 1fr;
+    }
+      .camera-text-left h1{
+        font-size: 35px;
+    }
+    .camera-right{
+        background-size: 54%;
+        background-position: center;
+    }
+
 @media (max-width:800px){
-    .main{
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+   .main{
         grid-template-columns: 1fr;
         height: fit-content;
     }
+    .title-head h1{
+        text-align: center;
+    }
+    .collection-banner{
+        text-align: center;
+    }
+    .camera-right{
+        background-size: 54%;
+        background-position: center;
+    }
+    .collection-banner img{
+        max-width: 350px;
+    }
+    .camera-right img{
+        max-width: 350px;
+    }
+    .feature-right img{
+        max-width: 350px;
+    }
+    .collections{
+        grid-template-columns: 1fr;
+    }
+    .camera-text-left{
+        order: 2;
+        padding: 4px;
+        margin: 0px 60px;
+        text-align: center;
+    }
+    .camera-text-left button{
+       padding: 0px;
+        margin-left: 36%;
+    }
+    .nav-toggler-icon{
+        display: block;
+    }
+    .nav-bar{
+        position: absolute;
+        top: 50px;
+        left: 0;
+        width: 100%;
+        flex-direction: column;
+        align-items: right;
+        padding: 25px 0;
+        transform: translateY(-330px);
+        transition: .5s ease-in-out;
+        }
+        .nav-bar li a{
+            color: #FF008E;
+        }
+        #nav-toggler:checked ~ .nav-bar{
+            transform: translateY(0px);
+        }
 }
-@media
-
